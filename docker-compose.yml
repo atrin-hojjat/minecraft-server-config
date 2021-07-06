@@ -17,7 +17,7 @@ services:
       CONSOLE: "false"
       RCON: "true"
       TYPE: CURSEFORGE
-      ONLINE_MODE: FALSE
+      ONLINE_MODE: "false"
       CF_SERVER_MOD: /modpacks/Enigmatica6Server-0.5.4.zip
     restart: always
   rcon:
