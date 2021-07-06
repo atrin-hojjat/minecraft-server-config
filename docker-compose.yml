@@ -9,13 +9,13 @@ services:
       - minecraft_data:/data
       - ./modpacks:/modpacks:ro
     environment:
-      EULA: "TRUE"
+      EULA: "true"
       VERSION: 1.16.5
       MAX_MEMORY: 2G
       VIEW_DISTANCE: 15
       MAX_PLAYERS: 12
       CONSOLE: "false"
-      RCON: true
+      RCON: "true"
       TYPE: CURSEFORGE
       ONLINE_MODE: FALSE
       CF_SERVER_MOD: /modpacks/Enigmatica6Server-0.5.4.zip
