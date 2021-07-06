@@ -18,7 +18,7 @@ services:
       RCON: true
       TYPE: CURSEFORGE
       ONLINE_MODE: FALSE
-      CF_SERVER_MOD: /modpacks/create_plus_server.zip
+      CF_SERVER_MOD: /modpacks/Enigmatica6Server-0.5.4.zip
     restart: always
   rcon:
     image: itzg/rcon
