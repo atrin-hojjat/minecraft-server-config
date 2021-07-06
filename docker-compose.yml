@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    volumes:
+      - minecraft_data:/data
+      - ./modpacks:/modpacks:ro
+    environment:
+      EULA: "TRUE"
+      VERSION: 1.16.5
+      MAX_MEMORY: 2G
+      VIEW_DISTANCE: 15
+      MAX_PLAYERS: 12
+      CONSOLE: "false"
+      RCON: true
+      TYPE: CURSEFORGE
+      ONLINE_MODE: FALSE
+      CF_SERVER_MOD: /modpacks/create_plus_server.zip
+    restart: always
+  rcon:
+    image: itzg/rcon
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    volumes:
+      - "rcon:/opt/rcon-web-admin/db"
+      
+     
+volumes:
+  minecraft_data:
+  rcon_data:
